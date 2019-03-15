@@ -4,6 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.joe.mybatis.dao.DepartmentMapper">
-
-
+    <select id="getDeptById" resultType="com.joe.mybatis.bean.Department">
+        select * from tbl_department where id=#{id}
+    </select>
 </mapper>
