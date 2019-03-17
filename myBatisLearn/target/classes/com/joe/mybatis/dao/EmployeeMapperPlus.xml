@@ -61,4 +61,9 @@
         select id,last_name lastName,email,gender from tbl_employee where id = #{id}
     </select>
 
+    <!--按照部门id查出所有员工 返回list类型-->
+    <select id="getEmpsByDeptId" resultType="com.joe.mybatis.bean.Employee">
+        select * from tbl_employee where d_id = #{deptId}
+    </select>
+
 </mapper>
