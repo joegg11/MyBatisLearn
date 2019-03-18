@@ -75,4 +75,6 @@
             (#{emp.lastName},#{emp.email},#{emp.gender},#{emp.department.id})
         </foreach>
     </insert>
+
+
 </mapper>

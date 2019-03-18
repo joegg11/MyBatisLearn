@@ -10,6 +10,7 @@
     <settings>
         <!--驼峰下划线命名设置，resultMap自定义写法用不到-->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="cacheEnabled" value="true"/>
         <!--懒加载设置-->
         <setting name="lazyLoadingEnabled" value="true"/>
         <setting name="aggressiveLazyLoading" value="false"/>

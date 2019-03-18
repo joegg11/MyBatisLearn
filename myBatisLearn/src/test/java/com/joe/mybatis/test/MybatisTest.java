@@ -245,4 +245,27 @@ public class MybatisTest {
             openSession.close();
         }
     }
+
+    @Test
+    public void testSecondLevelCache() throws IOException{
+        SqlSessionFactory sqlSessionFactory = getSqlSessionFactory();
+        SqlSession openSession1 = sqlSessionFactory.openSession();
+        SqlSession openSession2 = sqlSessionFactory.openSession();
+        try {
+
+            EmployeeMapper mapper1 = openSession1.getMapper(EmployeeMapper.class);
+            EmployeeMapper mapper2 = openSession2.getMapper(EmployeeMapper.class);
+
+            Employee emp1 = mapper1.getEmpById(1);
+            System.out.println(emp1);
+            openSession1.close();
+
+            Employee emp2 = mapper2.getEmpById(1);
+            System.out.println(emp2);
+            openSession2.close();
+
+        }finally {
+
+        }
+    }
 }
