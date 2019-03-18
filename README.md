@@ -1,2 +1,2 @@
 # MyBatisLearn
-整理了一下MyBatis的学习过程
+重头再学一遍MyBatis
